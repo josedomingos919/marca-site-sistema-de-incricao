@@ -22,6 +22,7 @@ class CreateSubscriptionsTable extends Migration
             $table->string('company');
             $table->string('phone_number');
             $table->string('cell_phone');
+            $table->integer('courses_id');
             $table->enum('type', ['student', 'professional', 'associate']);
             $table->string('password');
             $table->timestamps();
