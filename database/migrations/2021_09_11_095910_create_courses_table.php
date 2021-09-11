@@ -20,7 +20,7 @@ class CreateCoursesTable extends Migration
             $table->string('value')->nullable(false);
             $table->string('data_start')->nullable(false);
             $table->string('data_end')->nullable(false);
-            $table->int('max_subscribers')->nullable(false);
+            $table->integer('max_subscribers')->nullable(false);
             $table->string('archive')->nullable(false);
             $table->timestamps();
         });
