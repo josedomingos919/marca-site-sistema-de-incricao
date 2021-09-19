@@ -1,6 +1,8 @@
 body {
   height: 100vh;
   width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 .div-sec-left {
@@ -30,18 +32,108 @@ body {
   display: flex;
 }
 
+.left-login h1 {
+  color: rgb(0 0 0 / 10%);
+  font-weight: bold;
+  font-size: 30px !important;
+  margin-top: -38px;
+}
+
 .left-login {
+  text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 20vw;
+  position: relative;
+}
+
+.left-login p {
+  position: absolute;
+  bottom: 0px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.459);
+  font-style: italic;
 }
 
 .right-login {
+  padding: 10px 40px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: calc(100% - 20vw);
   height: 100%;
+}
+
+.logo img {
+  margin-top: -100px;
+  width: 312px;
+}
+
+.right-login b {
+  margin-bottom: 40px;
+}
+
+.input-container input {
+  width: 100%;
+  height: 100%;
+  height: 26px;
+}
+
+.input-container:focus-within {
+  border-color: #1aebb6;
+}
+
+.input-container:focus-within i {
+  color: #1aebb6 !important;
+}
+
+.input-container i {
+  transition: 0.3s;
+  color: #757575;
+  font-size: 17px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #00000024;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label-container {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-entrar {
+  letter-spacing: 2px;
+  border-radius: 3px;
+  background-color: #1aebb6;
+  color: black;
+  height: 37px;
+  max-width: 113px;
+  width: 100%;
+}
+
+.btn-deste {
+  width: 100%;
+  text-align: right;
+}
+
+.forget-container {
+  margin-top: 30px;
+  margin-bottom: -60px;
+}
+
+.forget-container a {
+  color: rgba(0, 0, 0, 0.596);
 }
