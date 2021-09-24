@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="icon" href="assets/img/logo.png">
-    <link href="assets/css/main.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/dashboard.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../assets/img/logo.png">
+    <link href="../assets/css/main.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/dashboard.css" rel="stylesheet" type="text/css">
     
-    <script src="assets\js\jquery-3.6.0.js"></script>
-    <script src="assets\scripts\util.js"></script> 
+    <script src="../assets\js\jquery-3.6.0.js"></script>
+    <script src="../assets\scripts\util.js"></script> 
 </head>
 <body>
 
     <section class="nav-container">
         <div class="container-nav-sub">
             <div class="div-img-user">
-                <img src="assets\img\user.jpg" alt="user" >
+                <img src="../assets\img\user.jpg" alt="user" >
             </div> 
             <div class="user-info-div">
                 <label id="id_user_name" ></label><br>
@@ -143,9 +143,7 @@
                              
                             <option selected disabled value="">ex.: Programação</option>
                             
-                            @foreach( @$courses as $e)   
-                                <option value="{{ $e['id'] }}">{{ $e['name'] }}</option> 
-                            @endforeach  
+                            
                               
                          </select> 
                          <i class="fas fa-text-height"></i>
@@ -185,6 +183,6 @@
         </div>
     </form>
  
-    <script src="assets\scripts\dashboard.js"></script>
+    <script src="../assets\scripts\dashboard.js"></script>
 </body>
 </html>

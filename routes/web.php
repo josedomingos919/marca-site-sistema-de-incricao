@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\SubscriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ Route::get('/', [AppController::class, 'index']);
 Route::get('/login', [AppController::class, 'index']);
 
 Route::get('/dashboard', [AppController::class, 'getDashBoard']);
+Route::get('/inscricao/listar', [SubscriptionController::class, 'all']);

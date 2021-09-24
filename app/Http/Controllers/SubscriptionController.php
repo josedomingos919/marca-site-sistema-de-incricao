@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Subscription;
+use App\Http\Controllers\AuxController;
 
 class SubscriptionController extends Controller
 {
@@ -42,5 +43,17 @@ class SubscriptionController extends Controller
             ],
             202
         );
+    }
+
+    public function all(Request $request)
+    {
+        $result = Subscription::all();
+
+        return view('subscriptions/list', [
+            'breadcrumbs' => 'Inscrição  /  Listar',
+            'icon' => 'fas fa-users',
+            'routes' => AuxController::getAdminRoutes('insc_list'),
+            'subscriptions' => $result,
+        ]);
     }
 }

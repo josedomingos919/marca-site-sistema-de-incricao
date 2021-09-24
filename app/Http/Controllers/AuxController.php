@@ -17,27 +17,27 @@ class AuxController extends Controller
             'insc_list' => [
                 'title' => 'Listar Inscrições',
                 'icon' => 'fas fa-table',
-                'path' => '/dashboard/inscricao/listar',
+                'path' => '../inscricao/listar',
             ],
             'cour' => [
                 'title' => 'Curso',
                 'icon' => 'fas fa-book',
-                'path' => '/dashboard/cursos',
+                'path' => '../cursos',
             ],
             'cour_list' => [
                 'title' => 'Listar Cursos',
                 'icon' => 'fas fa-table',
-                'path' => '/dashboard/cursos/listar',
+                'path' => '../cursos/listar',
             ],
             'user' => [
                 'title' => 'Usuário',
                 'icon' => 'fas fa-users',
-                'path' => '/dashboard/usuarios',
+                'path' => '../usuarios',
             ],
             'user_list' => [
                 'title' => 'Listar Usuários',
                 'icon' => 'fas fa-table',
-                'path' => '/dashboard/usuarios/listar',
+                'path' => '../usuarios/listar',
             ],
         ];
 
