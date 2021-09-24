@@ -1,3 +1,5 @@
+@import './input.css';
+
 body {
   height: 100vh;
   width: 100%;
@@ -75,43 +77,6 @@ body {
 
 .right-login b {
   margin-bottom: 40px;
-}
-
-.input-container input {
-  width: 100%;
-  height: 100%;
-  height: 26px;
-}
-
-.input-container:focus-within {
-  border-color: #1aebb6;
-}
-
-.input-container:focus-within i {
-  color: #1aebb6 !important;
-}
-
-.input-container i {
-  transition: 0.3s;
-  color: #757575;
-  font-size: 17px;
-}
-
-.input-container {
-  margin-bottom: 20px;
-  border-radius: 5px;
-  width: 100%;
-  border: 1px solid #00000024;
-  padding: 10px 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.label-container {
-  text-align: left;
-  width: 100%;
-  margin-bottom: 10px;
 }
 
 .btn-entrar {

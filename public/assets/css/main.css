@@ -10,4 +10,5 @@
   user-select: none;
   -webkit-user-drag: none;
   text-decoration: none;
+  box-sizing: border-box;
 }

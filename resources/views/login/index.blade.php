@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="icon" href="assets/img/logo.png">
     <link href="assets/css/main.css" rel="stylesheet" type="text/css">
     <link href="assets/css/login.css" rel="stylesheet" type="text/css">
 </head>
@@ -18,7 +19,8 @@
                 <h1>Sistema de Inscrição</h1>
                 <p>CopyRight@2021</p>
             </div>
-            <form class="right-login">
+
+            <form id="frmLogin" class="right-login">
                 <b>LOGIN</b>
 
                 <div class="label-container">
@@ -26,14 +28,14 @@
                 </div>
 
                 <div class="input-container">
-                    <input required type="email" placeholder="ex.: jose@gmail.com" /> <i class="fas fa-envelope"></i> 
+                    <input name="email" required type="email" placeholder="ex.: jose@gmail.com" /> <i class="fas fa-envelope"></i> 
                 </div>
 
                 <div class="label-container">
                     <label>Palavra Passe</label>
                 </div>
                 <div class="input-container">
-                    <input required minLength="6" type="password" placeholder="ex.: domingos.364" /> <i class="fas fa-lock"></i>
+                    <input name="password" required minLength="6" type="password" placeholder="ex.: domingos.364" /> <i class="fas fa-lock"></i>
                 </div>
 
                 <div class="btn-deste">
@@ -45,6 +47,9 @@
             </form>
         </div>
     </section>
-
+ 
+    <script src="assets\js\jquery-3.6.0.js"></script>
+    <script src="assets\scripts\util.js"></script> 
+    <script src="assets\scripts\login.js"></script>
 </body>
 </html>

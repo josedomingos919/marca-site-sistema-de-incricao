@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthLoginController;
+use App\Http\Controllers\SubscriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/* Private Routes */
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::post('/register', [AuthLoginController::class, 'register']);
+    Route::post('/update', [AuthLoginController::class, 'update']);
+
+    Route::post('/subscription', [SubscriptionController::class, 'add']);
+});
+
+// Public Routes
+Route::post('/login', [AuthLoginController::class, 'login']);
