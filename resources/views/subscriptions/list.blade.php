@@ -47,80 +47,38 @@
           <div class="header-icon">  <i class="fas fa-users"></i> </div> {{ $breadcrumbs }} 
         </div>
 
-        <div class="app-form">
+        <div class="app-form t">
             <div class="min-row">
                 <div class="col-6">
                     <div class="label-container">
-                        <label>Nome do Aluno</label>
+                        <label>Pesquisar</label>
                     </div>
                     <div class="input-container">
-                        <input name="name" required="" type="text" placeholder="ex.: José Ndonge" /> <i class="fas fa-text-height"></i>
+                        <input name="name" required="" type="text" placeholder="ex.: esperando..." /> <i class="fas fa-search"></i>
                     </div>
                 </div> 
 
                 <div class="col-3">
                     <div class="label-container">
-                        <label>Email</label>
-                    </div>
+                        <label>Limite</label>
+                    </div> 
                     <div class="input-container">
-                        <input name="email" required="" type="email" placeholder="ex.: jose@gmail.com" />  <i class="fas fa-envelope"></i>
-                    </div>
-                </div> 
-
-                <div class="col-3">
-                    <div class="label-container">
-                        <label>CPF</label>
-                    </div>
-                    <div class="input-container">
-                        <input name="cpf" required="" type="text" placeholder="ex.: 200-344-434-34" /> <i class="fas fa-text-height"></i>
+                         <select required="true" name="type" >
+                             <option value="/inscricao/listar">5</option> 
+                             <option value="/inscricao/listar">10</option> 
+                             <option value="20">20</option> 
+                             <option value="50">50</option> 
+                             <option value="70">70</option> 
+                             <option value="90">90</option> 
+                             <option value="100">100</option>  
+                         </select> 
+                         <i class="fas fa-sort-numeric-up-alt"></i>
                     </div>
                 </div>
-            </div>
-
-            <div class="min-row">
                 
-                <div class="col-6">
-                    <div class="label-container">
-                        <label>Endereço</label>
-                    </div>
-                    <div class="input-container">
-                        <input name="address" required="" type="text" placeholder="ex.: São paulo, br " /> <i class="fas fa-text-height"></i>
-                    </div>
-                </div> 
-
                 <div class="col-3">
                     <div class="label-container">
-                        <label>Empresa</label>
-                    </div>
-                    <div class="input-container">
-                        <input name="company" required="" type="text" placeholder="ex.: MarcaSite" />  <i class="fas fa-building"></i>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="label-container">
-                        <label>Telefone</label>
-                    </div>
-                    <div class="input-container">
-                        <input name="phone_number" required="" type="number" placeholder="ex.: +244 944..." />  <i class="fas fa-phone-square-alt"></i>
-                    </div>
-            </div> 
-                
-            </div>
-
-            <div class="min-row">
-                  
-                <div class="col-3">
-                    <div class="label-container">
-                        <label>Celular</label>
-                    </div>
-                    <div class="input-container">
-                        <input name="cell_phone" required="" type="number" placeholder="ex.: +244 999..." /> <i class="fas fa-phone-square-alt"></i>
-                    </div>
-                </div>
-
-                <div class="col-6">
-                    <div class="label-container">
-                        <label>Tipo de Escrição</label>
+                        <label>Categoria</label>
                     </div> 
                     <div class="input-container">
                          <select required="true" name="type" >
@@ -130,54 +88,102 @@
                              <option value="professional">Profissional</option> 
                              <option value="associate">Associado</option> 
                          </select> 
-                         <i class="fas fa-text-height"></i>
+                         <i class="fas fa-filter"></i>
                     </div>
                 </div>
 
-                <div class="col-3">
-                    <div class="label-container">
-                        <label>Curso</label>  
-                    </div> 
-                    <div class="input-container">
-                         <select required="true" name="courses_id" >
-                             
-                            <option selected disabled value="">ex.: Programação</option>
-                            
-                            
-                              
-                         </select> 
-                         <i class="fas fa-text-height"></i>
-                    </div>
-                </div>
-
-
-            </div> 
+            
+            </div>
 
             <div class="min-row">
-                <div class="col-3">
-                    <div class="label-container">
-                        <label>Senha</label>
-                    </div>
-                    <div class="input-container">
-                        <input name="password" required="" type="password" placeholder="ex.: teste.124" /> <i class="fas fa-key"></i>
-                    </div>
-                </div> 
-
-                <div class="col-3">
-                    <div class="label-container">
-                        <label>Confirmar Senha</label>
-                    </div>
-                    <div class="input-container">
-                        <input name="password_confirmation" required="" type="password" placeholder="ex.: teste.124" /> <i class="fas fa-key"></i>
-                    </div>
-                </div> 
+            <table class="table">
+                <thead>
+                    <tr> 
+                        <th scope="col">Inscrito</th>
+                        <th scope="col">Data/Inscrição</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> 
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td> 
+                    </tr> 
+                    <tr> 
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td> 
+                    </tr> 
+                    
+                </tbody>
+            </table>
+            
+            </div>
+           
+            <div  class="min-row mt-2" >
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
 
                 <div class="col-6 d-flex align-items-center"> 
-                    <button type="submit" class="btn-entrar t">Salvar</button>
-                    <button id="btn_cancel" class="btn-entrar delete">Cancelar</button>
+                    <button type="submit" class="btn-entrar t">Exportar PDF</button>
+                    <button id="btn_cancel" class="btn-entrar delete">Exportar XSL</button>
                 </div>
-
             </div>
+
+           
             
            
         </div>

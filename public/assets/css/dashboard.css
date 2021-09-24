@@ -203,3 +203,8 @@ body {
 .btn-entrar.delete {
   background-color: orange;
 }
+
+.app-form.t {
+  overflow-y: auto;
+  overflow-x: hidden;
+}

@@ -7,8 +7,7 @@
     <title>Dashboard</title>
     <link rel="icon" href="assets/img/logo.png">
     <link href="assets/css/main.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/dashboard.css" rel="stylesheet" type="text/css">
-    
+    <link href="assets/css/dashboard.css" rel="stylesheet" type="text/css"> 
     <script src="assets\js\jquery-3.6.0.js"></script>
     <script src="assets\scripts\util.js"></script> 
 </head>
@@ -25,14 +24,12 @@
             </div>
         </div>
 
-        <div class="list-contaniner">
-
+        <div class="list-contaniner"> 
             @foreach($routes as $e)  
                 <a href="{{ $e['path'] }}" class="list-item {{ @$e['active'] }}">
                     <label><i class="fas fa-users"></i></label><label>{{ $e['title'] }}</label>
                 </a>
-            @endforeach  
-         
+            @endforeach   
         </div>
 
         <div class="div-logout"> 
@@ -96,6 +93,7 @@
                         <input name="company" required="" type="text" placeholder="ex.: MarcaSite" />  <i class="fas fa-building"></i>
                     </div>
                 </div>
+
                 <div class="col-3">
                     <div class="label-container">
                         <label>Telefone</label>
@@ -103,12 +101,11 @@
                     <div class="input-container">
                         <input name="phone_number" required="" type="number" placeholder="ex.: +244 944..." />  <i class="fas fa-phone-square-alt"></i>
                     </div>
-            </div> 
+                </div> 
                 
             </div>
 
-            <div class="min-row">
-                  
+            <div class="min-row"> 
                 <div class="col-3">
                     <div class="label-container">
                         <label>Celular</label>
@@ -150,9 +147,7 @@
                          </select> 
                          <i class="fas fa-text-height"></i>
                     </div>
-                </div>
-
-
+                </div> 
             </div> 
 
             <div class="min-row">
@@ -163,8 +158,7 @@
                     <div class="input-container">
                         <input name="password" required="" type="password" placeholder="ex.: teste.124" /> <i class="fas fa-key"></i>
                     </div>
-                </div> 
-
+                </div>  
                 <div class="col-3">
                     <div class="label-container">
                         <label>Confirmar Senha</label>
@@ -172,16 +166,12 @@
                     <div class="input-container">
                         <input name="password_confirmation" required="" type="password" placeholder="ex.: teste.124" /> <i class="fas fa-key"></i>
                     </div>
-                </div> 
-
+                </div>  
                 <div class="col-6 d-flex align-items-center"> 
                     <button type="submit" class="btn-entrar t">Salvar</button>
                     <button id="btn_cancel" class="btn-entrar delete">Cancelar</button>
-                </div>
-
-            </div>
-            
-           
+                </div> 
+            </div> 
         </div>
     </form>
  
