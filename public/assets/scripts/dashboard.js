@@ -14,9 +14,7 @@ $(document).ready(() => {
       type: 'POST',
       url: `${baseURL}/subscription`,
       data,
-      beforeSend: function (xhr) {
-        xhr.setRequestHeader('Authorization', `Bearer ${user.get().token}`)
-      },
+      beforeSend: beforeSend(),
       success: (response) => {
         console.log(response)
         alert('Inscrição realizada com sucesso!')

@@ -12,3 +12,16 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+
+.page-link.active {
+  background-color: #eaeaea;
+}
+
+.page-link {
+  white-space: nowrap;
+}
+.page-link,
+table thead th {
+  cursor: pointer;
+  color: #1aebb6 !important;
+}

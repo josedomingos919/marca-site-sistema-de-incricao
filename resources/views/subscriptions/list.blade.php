@@ -54,7 +54,7 @@
                         <label>Pesquisar</label>
                     </div>
                     <div class="input-container">
-                        <input name="name" required="" type="text" placeholder="ex.: esperando..." /> <i class="fas fa-search"></i>
+                        <input id="idSearh" name="name" required="" type="text" placeholder="ex.: esperando..." /> <i class="fas fa-search"></i>
                     </div>
                 </div> 
 
@@ -63,9 +63,9 @@
                         <label>Limite</label>
                     </div> 
                     <div class="input-container">
-                         <select required="true" name="type" >
-                             <option value="/inscricao/listar">5</option> 
-                             <option value="/inscricao/listar">10</option> 
+                         <select  id="limitSelect" required="true" name="type" >
+                             <option value="5">5</option> 
+                             <option value="10">10</option> 
                              <option value="20">20</option> 
                              <option value="50">50</option> 
                              <option value="70">70</option> 
@@ -82,7 +82,6 @@
                     </div> 
                     <div class="input-container">
                          <select required="true" name="type" >
-                             
                             <option selected disabled value="">ex.: Profissional</option>
                              <option value="student">Estudante</option> 
                              <option value="professional">Profissional</option> 
@@ -91,14 +90,13 @@
                          <i class="fas fa-filter"></i>
                     </div>
                 </div>
-
-            
             </div>
 
             <div class="min-row">
             <table class="table">
                 <thead>
-                    <tr> 
+                    <tr>  
+                        <th scope="col">#</th>
                         <th scope="col">Inscrito</th>
                         <th scope="col">Data/Inscrição</th>
                         <th scope="col">Categoria</th>
@@ -109,7 +107,7 @@
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="idTbody">
                     <tr> 
                         <td>Mark</td>
                         <td>Otto</td>
@@ -168,7 +166,7 @@
            
             <div  class="min-row mt-2" >
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination">
+                    <ul id='IdPage' class="pagination">
                         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -176,19 +174,18 @@
                         <li class="page-item"><a class="page-link" href="#">Next</a></li>
                     </ul>
                 </nav>
+            </div>
 
+            <div  class="min-row mt-5" >
                 <div class="col-6 d-flex align-items-center"> 
                     <button type="submit" class="btn-entrar t">Exportar PDF</button>
                     <button id="btn_cancel" class="btn-entrar delete">Exportar XSL</button>
                 </div>
             </div>
-
-           
-            
            
         </div>
     </form>
  
-    <script src="../assets\scripts\dashboard.js"></script>
+    <script src="../assets/scripts/subscriptions.js"></script>
 </body>
 </html>

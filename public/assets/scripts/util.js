@@ -60,6 +60,11 @@ const clearForm = (formId) => {
   obj = [...$(`#${formId} select`)].forEach((e) => (e.selectedIndex = 0))
 }
 
+const beforeSend = () =>
+  function (xhr) {
+    xhr.setRequestHeader('Authorization', `Bearer ${user.get().token}`)
+  }
+
 //inicialize
 $(document).ready(() => {
   displayUserData()
@@ -68,4 +73,11 @@ $(document).ready(() => {
 function displayUserData() {
   $('#id_user_name').text(user.get().user?.name)
   $('#id_user_acess').text(`-- ${user.get().user?.type} --`)
+}
+
+function formatData(data = '') {
+  let srt = data.split('.')[0]
+  srt = srt.split('T')
+
+  return srt[0] + ' ' + srt[1]
 }

@@ -52,7 +52,11 @@ class SubscriptionController extends Controller
             'limit' => 'required_with:end_page|integer|min:1',
         ]);
 
-        $result = Subscription::paginate($fields['limit']);
+        $result = Subscription::where(
+            'email',
+            'like',
+            '%' . (!empty($request->search) ? $request->search : '') . '%'
+        )->paginate($fields['limit']);
 
         return response($result, 202);
     }

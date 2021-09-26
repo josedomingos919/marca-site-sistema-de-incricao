@@ -8,6 +8,8 @@ $(document).ready(() => {
       type: 'POST',
       url: `${baseURL}/login`,
       data,
+      dataType: 'JSON',
+      beforeSend: beforeSend(),
       success: (response) => {
         user.set(response)
         redirect.replace('/dashboard')
@@ -15,7 +17,6 @@ $(document).ready(() => {
       error: () => {
         alert('Não autorizado!')
       },
-      dataType: 'JSON',
     })
   })
 })
