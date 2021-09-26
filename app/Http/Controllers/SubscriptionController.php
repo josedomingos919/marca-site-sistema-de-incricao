@@ -45,6 +45,18 @@ class SubscriptionController extends Controller
         );
     }
 
+    public function getAllData(Request $request)
+    {
+        $fields = $request->validate([
+            'page' => 'required_with:end_page|integer|min:1',
+            'limit' => 'required_with:end_page|integer|min:1',
+        ]);
+
+        $result = Subscription::paginate($fields['limit']);
+
+        return response($result, 202);
+    }
+
     public function all(Request $request)
     {
         $result = Subscription::all();

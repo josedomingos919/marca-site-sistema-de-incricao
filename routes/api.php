@@ -26,6 +26,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/update', [AuthLoginController::class, 'update']);
 
     Route::post('/subscription', [SubscriptionController::class, 'add']);
+    Route::get('/subscriptions', [SubscriptionController::class, 'getAllData']);
 });
 
 // Public Routes
