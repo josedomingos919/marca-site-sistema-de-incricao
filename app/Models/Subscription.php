@@ -20,6 +20,7 @@ class Subscription extends Model
         'courses_id',
         'type',
         'password',
+        'status',
     ];
 
     protected $table = 'suscriptions';

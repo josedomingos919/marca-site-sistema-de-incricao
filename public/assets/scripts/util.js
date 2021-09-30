@@ -81,3 +81,23 @@ function formatData(data = '') {
 
   return srt[0] + ' ' + srt[1]
 }
+
+function getTypePt(type) {
+  return (
+    {
+      student: 'Estudante',
+      professional: 'Profissional',
+      associate: 'Associado',
+    }[type] || ''
+  )
+}
+
+function getStatusPt(key) {
+  return (
+    {
+      pendding: 'Pedente',
+      payed: 'Profissional',
+      canceled: 'Cancelado',
+    }[key] || ''
+  )
+}

@@ -52,11 +52,20 @@ class SubscriptionController extends Controller
             'limit' => 'required_with:end_page|integer|min:1',
         ]);
 
+        $search = '%' . (isset($request->search) ? $request->search : '') . '%';
+
         $result = Subscription::where(
-            'email',
+            'type',
             'like',
-            '%' . (!empty($request->search) ? $request->search : '') . '%'
-        )->paginate($fields['limit']);
+            !empty($request->types) ? $request->types : '%%'
+        )
+            ->where(function ($query) use ($search) {
+                $query
+                    ->where('cpf', 'like', $search)
+                    ->orWhere('name', 'like', $search)
+                    ->orWhere('email', 'like', $search);
+            })
+            ->paginate($fields['limit']);
 
         return response($result, 202);
     }

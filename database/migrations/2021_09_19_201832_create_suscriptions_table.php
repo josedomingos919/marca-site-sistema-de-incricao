@@ -16,8 +16,8 @@ class CreateSuscriptionsTable extends Migration
         Schema::create('suscriptions', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('cpf')->unique();
+            $table->string('email', 100)->unique();
+            $table->string('cpf', 100)->unique();
             $table->string('address');
             $table->string('company');
             $table->string('phone_number');
@@ -25,6 +25,9 @@ class CreateSuscriptionsTable extends Migration
             $table->integer('courses_id');
             $table->enum('type', ['student', 'professional', 'associate']);
             $table->string('password');
+            $table
+                ->enum('status', ['pendding', 'payed', 'canceled'])
+                ->default('pendding');
             $table->timestamps();
         });
     }

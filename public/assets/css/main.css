@@ -25,3 +25,34 @@ table thead th {
   cursor: pointer;
   color: #1aebb6 !important;
 }
+
+table td {
+  white-space: nowrap;
+}
+
+table tbody tr:hover {
+  transition: 0.4s;
+  cursor: pointer;
+  background-color: #eaeaea;
+}
+
+.options-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.options-table label {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.min-row.table_c {
+  width: 65vw;
+  overflow-x: auto;
+}
+
+.options-table label:hover {
+  color: #1aebb6;
+}

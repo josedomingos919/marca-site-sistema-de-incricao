@@ -10,9 +10,8 @@
     <link href="assets/css/dashboard.css" rel="stylesheet" type="text/css"> 
     <script src="assets\js\jquery-3.6.0.js"></script>
     <script src="assets\scripts\util.js"></script> 
-</head>
-<body>
-
+</head> 
+<body> 
     <section class="nav-container">
         <div class="container-nav-sub">
             <div class="div-img-user">
@@ -51,7 +50,7 @@
                         <label>Nome do Aluno</label>
                     </div>
                     <div class="input-container">
-                        <input name="name" required="" type="text" placeholder="ex.: José Ndonge" /> <i class="fas fa-text-height"></i>
+                        <input name="name" value="{{ $data['name'] }}"  required="" type="text" placeholder="ex.: José Ndonge" /> <i class="fas fa-text-height"></i>
                     </div>
                 </div> 
 
@@ -60,7 +59,7 @@
                         <label>Email</label>
                     </div>
                     <div class="input-container">
-                        <input name="email" required="" type="email" placeholder="ex.: jose@gmail.com" />  <i class="fas fa-envelope"></i>
+                        <input name="email" value="{{ $data['email'] }}"  required="" type="email" placeholder="ex.: jose@gmail.com" />  <i class="fas fa-envelope"></i>
                     </div>
                 </div> 
 
@@ -69,7 +68,7 @@
                         <label>CPF</label>
                     </div>
                     <div class="input-container">
-                        <input name="cpf" required="" type="text" placeholder="ex.: 200-344-434-34" /> <i class="fas fa-text-height"></i>
+                        <input name="cpf" required="" value="{{ $data['cpf'] }}"  type="text" placeholder="ex.: 200-344-434-34" /> <i class="fas fa-text-height"></i>
                     </div>
                 </div>
             </div>
@@ -81,7 +80,7 @@
                         <label>Endereço</label>
                     </div>
                     <div class="input-container">
-                        <input name="address" required="" type="text" placeholder="ex.: São paulo, br " /> <i class="fas fa-text-height"></i>
+                        <input name="address" value="{{ $data['address'] }}"  required="" type="text" placeholder="ex.: São paulo, br " /> <i class="fas fa-text-height"></i>
                     </div>
                 </div> 
 
@@ -90,7 +89,7 @@
                         <label>Empresa</label>
                     </div>
                     <div class="input-container">
-                        <input name="company" required="" type="text" placeholder="ex.: MarcaSite" />  <i class="fas fa-building"></i>
+                        <input name="company"  value="{{ $data['company'] }}"  required="" type="text" placeholder="ex.: MarcaSite" />  <i class="fas fa-building"></i>
                     </div>
                 </div>
 
@@ -99,7 +98,7 @@
                         <label>Telefone</label>
                     </div>
                     <div class="input-container">
-                        <input name="phone_number" required="" type="number" placeholder="ex.: +244 944..." />  <i class="fas fa-phone-square-alt"></i>
+                        <input name="phone_number"   value="{{ $data['phone_number'] }}" required="" type="number" placeholder="ex.: +244 944..." />  <i class="fas fa-phone-square-alt"></i>
                     </div>
                 </div> 
                 
@@ -111,7 +110,7 @@
                         <label>Celular</label>
                     </div>
                     <div class="input-container">
-                        <input name="cell_phone" required="" type="number" placeholder="ex.: +244 999..." /> <i class="fas fa-phone-square-alt"></i>
+                        <input name="cell_phone"  value="{{ $data['cell_phone'] }}" required="" type="number" placeholder="ex.: +244 999..." /> <i class="fas fa-phone-square-alt"></i>
                     </div>
                 </div>
 
@@ -120,9 +119,8 @@
                         <label>Tipo de Escrição</label>
                     </div> 
                     <div class="input-container">
-                         <select required="true" name="type" >
-                             
-                            <option selected disabled value="">ex.: Profissional</option>
+                         <select required="true" name="type" > 
+                             <option selected disabled value="">ex.: Profissional</option>
                              <option value="student">Estudante</option> 
                              <option value="professional">Profissional</option> 
                              <option value="associate">Associado</option> 
@@ -156,7 +154,7 @@
                         <label>Senha</label>
                     </div>
                     <div class="input-container">
-                        <input name="password" required="" type="password" placeholder="ex.: teste.124" /> <i class="fas fa-key"></i>
+                        <input name="password" value="{{ $data['password'] }}" required="" type="password" placeholder="ex.: teste.124" /> <i class="fas fa-key"></i>
                     </div>
                 </div>  
                 <div class="col-3">
@@ -164,7 +162,7 @@
                         <label>Confirmar Senha</label>
                     </div>
                     <div class="input-container">
-                        <input name="password_confirmation" required="" type="password" placeholder="ex.: teste.124" /> <i class="fas fa-key"></i>
+                        <input name="password_confirmation"  value="{{ $data['password'] }}"  required="" type="password" placeholder="ex.: teste.124" /> <i class="fas fa-key"></i>
                     </div>
                 </div>  
                 <div class="col-6 d-flex align-items-center"> 

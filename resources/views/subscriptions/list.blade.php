@@ -81,8 +81,8 @@
                         <label>Categoria</label>
                     </div> 
                     <div class="input-container">
-                         <select required="true" name="type" >
-                            <option selected disabled value="">ex.: Profissional</option>
+                         <select required="true" id="idCategoriType" name="type" >
+                             <option selected value="" >ex.: Profissional</option>
                              <option value="student">Estudante</option> 
                              <option value="professional">Profissional</option> 
                              <option value="associate">Associado</option> 
@@ -92,87 +92,30 @@
                 </div>
             </div>
 
-            <div class="min-row">
-            <table class="table">
-                <thead>
-                    <tr>  
-                        <th scope="col">#</th>
-                        <th scope="col">Inscrito</th>
-                        <th scope="col">Data/Inscrição</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">CPF</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Total</th>
-                        <th scope="col">Ações</th>
-                    </tr>
-                </thead>
-                <tbody id="idTbody">
-                    <tr> 
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td> 
-                    </tr> 
-                    <tr> 
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td> 
-                    </tr> 
-                    <tr> 
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td> 
-                    </tr> 
-                    <tr> 
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td> 
-                    </tr> 
-                    <tr> 
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>Mark</td>
-                        <td>Otto</td> 
-                    </tr> 
-                    
-                </tbody>
-            </table>
-            
+            <div class="min-row table_c">
+                <table class="table">
+                    <thead>
+                        <tr>  
+                            <th scope="col">#</th>
+                            <th scope="col">Inscrito</th>
+                            <th scope="col">Data/Inscrição</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="idTbody">
+                        
+                    </tbody>
+                </table> 
             </div>
            
             <div  class="min-row mt-2" >
                 <nav aria-label="Page navigation example">
-                    <ul id='IdPage' class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    </ul>
+                    <ul id='IdPage' class="pagination"></ul>
                 </nav>
             </div>
 
